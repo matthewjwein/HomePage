@@ -8,7 +8,7 @@ function App() {
           Hello, World.
         </p>
         <p className="Introduction">
-          I'm taking on the challenge of developing a project a week.
+          I'm developing a project a week.
         </p>
         <p className="Introduction">
           This website will showcase these projects.
