@@ -24,14 +24,23 @@
   color: white;
 }
 
+.App-header>.Introduction {
+  width: 400px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.ProjectList {
+  text-align: left;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
