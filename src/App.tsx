@@ -10,7 +10,7 @@ function App(): JSX.Element {
           Under Construction 🚧
         </p>
         <p className="Introduction">
-          I'm developing a project a week, starting with this website to showcase these projects.
+          I'm developing a project a week, starting with a website to showcase these projects.
         </p>
         <p className="Introduction">
           Check back again soon for updates.
