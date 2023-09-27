@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import ProjectList from './components/ProjectList'
 import Project from './components/Project'
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 const projects = [
   {
