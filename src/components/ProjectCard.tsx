@@ -10,7 +10,7 @@ interface ProjectProps {
 
 const Post: React.FC<ProjectProps> = ({ id, title, tags }) => {
     return (
-        <Card className="Project">
+        <Card className="project-card">
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Link to={`/project/${id}`}>Coming Soon</Link>

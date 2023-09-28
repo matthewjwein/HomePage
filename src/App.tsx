@@ -20,9 +20,9 @@ const projects = [
 
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className="Introduction">
+    <div className="app">
+      <header className="app-header">
+        <p className="introduction">
           Hi. I'm developing a project a week, starting with this website to showcase these projects.
         </p>
         <ProjectList projects={projects} />
