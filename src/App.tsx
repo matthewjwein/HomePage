@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react'
-import ProjectList from './components/ProjectList';
+import Navbar from './components/Navbar';
+import Homepage from './components/Homepage';
 import { Routes, Route } from "react-router-dom";
 import Project1 from './components/projects/1/app';
 import Project2 from './components/projects/2/app';
@@ -21,13 +22,9 @@ const projects = [
 function App(): JSX.Element {
   return (
     <div className="app">
-      <header className="app-header">
-        <p className="introduction">
-          Hi. I'm developing a project a week, starting with this website to showcase these projects.
-        </p>
-        <ProjectList projects={projects} />
-      </header>
+      <Navbar />
       <Routes>
+        <Route path="/" element={<Homepage projects={projects} />} />
         <Route path="/project/1" element={<Project1 />} />
         <Route path="/project/2" element={<Project2 />} />
       </Routes>
