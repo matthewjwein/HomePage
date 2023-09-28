@@ -13,7 +13,7 @@ const Post: React.FC<ProjectProps> = ({ id, title, tags }) => {
         <Card className="Project">
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Link to={`/project/${id}`}>Try It Out</Link>
+                <Link to={`/project/${id}`}>Coming Soon</Link>
             </Card.Body>
         </Card>
     );
