@@ -1,20 +1,19 @@
 import './App.css';
 import React from 'react'
-import ProjectList from './components/ProjectList'
-import Project from './components/Project'
+import ProjectList from './components/ProjectList';
 import { Routes, Route } from "react-router-dom";
+import Project1 from './components/projects/1/app';
+import Project2 from './components/projects/2/app';
 
 const projects = [
   {
-    title: 'Sep 24 - Sep 30: Portfolio Website',
+    id: 1,
+    title: 'Oct 1 - Oct 7',
     tags: ['React'],
   },
   {
-    title: 'Oct 1 - Oct 7: Simple Game',
-    tags: ['React'],
-  },
-  {
-    title: 'Oct 8 - Oct 14: Multiplayer Game',
+    id: 2,
+    title: 'Oct 8 - Oct 14',
     tags: ['React'],
   },
 ];
@@ -29,10 +28,8 @@ function App(): JSX.Element {
         <ProjectList projects={projects} />
       </header>
       <Routes>
-        <Route path="/" element={<div>Click on a project to try it out</div>} />
-        {projects.map((project, index) => (
-          <Route path={`/project/${index + 1}`} element={<Project title={project.title} tags={project.tags} />} />
-        ))}
+        <Route path="/project/1" element={<Project1 />} />
+        <Route path="/project/2" element={<Project2 />} />
       </Routes>
     </div>
   );
