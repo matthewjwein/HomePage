@@ -33,7 +33,7 @@ body {
   text-align: left;
 }
 
-.project-list-card .card-text {
+.project-list-card .project-card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: .5rem;
@@ -41,6 +41,10 @@ body {
 
 .project-card {
   width: 18rem;
+}
+
+.project-card .view-button {
+  float: right;
 }
 
 @keyframes App-logo-spin {

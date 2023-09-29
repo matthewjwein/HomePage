@@ -14,7 +14,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
             className="project-list-card">
             <Card.Header>Projects</Card.Header>
             <Card.Body>
-                <Card.Text>
+                <Card.Text className="project-card-wrapper">
                     {projects.map((project, index) => (
                         <ProjectCard key={index} id={project.id} title={project.title} />
                     ))}
