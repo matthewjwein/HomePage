@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
                 <div className="external-links">
                     <label>Outbound: </label>
                     <a href="https://github.com/matthewjwein">Github</a>
