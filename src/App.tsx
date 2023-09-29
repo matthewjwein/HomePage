@@ -23,11 +23,13 @@ function App(): JSX.Element {
   return (
     <div className="app">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage projects={projects} />} />
-        <Route path="/project/1" element={<Project1 />} />
-        <Route path="/project/2" element={<Project2 />} />
-      </Routes>
+      <div className="project-wrapper">
+        <Routes>
+          <Route path="/" element={<Homepage projects={projects} />} />
+          <Route path="/project/1" element={<Project1 />} />
+          <Route path="/project/2" element={<Project2 />} />
+        </Routes>
+      </div>
     </div>
   );
 }

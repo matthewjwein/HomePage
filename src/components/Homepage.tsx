@@ -8,7 +8,7 @@ interface ProjectListProps {
 
 const Post: React.FC<ProjectListProps> = ({ projects }) => {
     return (
-        <div className="app-header">
+        <div>
             <p className="introduction">
                 Hi. I'm developing a project a week, starting with this website to showcase these projects.
             </p>

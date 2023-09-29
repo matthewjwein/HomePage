@@ -8,7 +8,7 @@ interface ProjectListProps {
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
     return (
         <div>
-            <label>Projects</label>
+            <label className="project-list-label">Projects</label>
             <div className="project-list">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} id={project.id} title={project.title} tags={project.tags} />
