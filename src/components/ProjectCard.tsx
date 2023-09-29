@@ -5,17 +5,25 @@ import { Link } from "react-router-dom";
 interface ProjectProps {
     id: number;
     title: string;
-    tags: string[];
 }
 
-const Post: React.FC<ProjectProps> = ({ id, title, tags }) => {
+const Post: React.FC<ProjectProps> = ({ id, title }) => {
     return (
-        <Card className="project-card">
+        <Card
+            bg="light"
+            key={title}
+            text="dark"
+            className="project-card"
+        >
+            <Card.Header>{title}</Card.Header>
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Link to={`/project/${id}`}>Coming Soon</Link>
+                <Card.Title>Coming Soon</Card.Title>
+                <Card.Text>
+                    <Link to={`/project/${id}`}>Coming Soon</Link>
+                </Card.Text>
             </Card.Body>
         </Card>
+
     );
 };
 

@@ -1,20 +1,26 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import Card from 'react-bootstrap/Card';
 
 interface ProjectListProps {
-    projects: { id: number, title: string, tags: string[] }[];
+    projects: { id: number, title: string }[];
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
     return (
-        <div>
-            <label className="project-list-label">Projects</label>
-            <div className="project-list">
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} id={project.id} title={project.title} tags={project.tags} />
-                ))}
-            </div>
-        </div>
+        <Card
+            bg="light"
+            text="dark"
+            className="project-list-card">
+            <Card.Header>Projects</Card.Header>
+            <Card.Body>
+                <Card.Text>
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} id={project.id} title={project.title} />
+                    ))}
+                </Card.Text>
+            </Card.Body>
+        </Card>
     );
 };
 

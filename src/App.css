@@ -3,21 +3,18 @@ body {
 }
 
 .navbar {
-  text-align: left;
   background-color: #ddd;
   padding: 5px;
 }
 
-.navbar a {
+.navbar .page-links {
   padding: 5px;
-}
-
-.navbar img {
-  height: 30px;
+  float: left;
 }
 
 .navbar .external-links {
   float: right;
+  padding: 5px;
 }
 
 .project-wrapper {
@@ -36,19 +33,14 @@ body {
   text-align: left;
 }
 
-.project-list {
+.project-list-card .card-text {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: .5rem;
-  padding: 50px;
 }
 
-.tag {
-  background-color: blanchedalmond;
-  width: min-content;
-  border: 1px solid grey;
-  margin: 4px auto;
-  padding: 3px;
+.project-card {
+  width: 18rem;
 }
 
 @keyframes App-logo-spin {

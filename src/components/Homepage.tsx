@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectList from './ProjectList'
 
 interface ProjectListProps {
-    projects: { id: number, title: string, tags: string[] }[];
+    projects: { id: number, title: string }[];
 }
 
 

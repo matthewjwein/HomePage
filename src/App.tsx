@@ -9,13 +9,11 @@ import Project2 from './components/projects/2/app';
 const projects = [
   {
     id: 1,
-    title: 'Oct 1 - Oct 7',
-    tags: ['React'],
+    title: 'Oct 1 - Oct 7'
   },
   {
     id: 2,
-    title: 'Oct 8 - Oct 14',
-    tags: ['React'],
+    title: 'Oct 8 - Oct 14'
   },
 ];
 
