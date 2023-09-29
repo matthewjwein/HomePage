@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 interface ProjectProps {
     id: number;
@@ -19,7 +19,7 @@ const Post: React.FC<ProjectProps> = ({ id, title }) => {
             <Card.Body>
                 <Card.Title>Coming Soon</Card.Title>
                 <Card.Text>
-                    <Button className="view-button" href={`/project/${id}`} variant="primary">View</Button>
+                    <Link to={`/project/${id}`}>View</Link>
                 </Card.Text>
             </Card.Body>
         </Card>
