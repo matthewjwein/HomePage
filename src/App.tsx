@@ -3,8 +3,8 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import { Routes, Route } from "react-router-dom";
-import Project1 from './components/projects/1/App';
-import Project2 from './components/projects/2/App';
+import Project1 from './components/projects/Project1/App';
+import Project2 from './components/projects/Project2/App';
 
 const projects = [
   {
