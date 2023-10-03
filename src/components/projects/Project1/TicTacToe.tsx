@@ -1,22 +1,24 @@
 import { useState } from 'react';
+import Card from 'react-bootstrap/Card';
 
 interface SquareProps {
     value: string;
+    borderClassName: string;
     onSquareClick: () => void;
+}
+
+const Square: React.FC<SquareProps> = ({ value, borderClassName, onSquareClick }) => {
+    return (
+        <button className={`square ${borderClassName}`} onClick={onSquareClick}>
+            {value}
+        </button>
+    );
 }
 
 interface BoardProps {
     xIsNext: boolean;
     squares: string[];
     onPlay: (nextSquares: string[]) => void;
-}
-
-const Square: React.FC<SquareProps> = ({ value, onSquareClick }) => {
-    return (
-        <button className="square" onClick={onSquareClick}>
-            {value}
-        </button>
-    );
 }
 
 const Board: React.FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
@@ -38,26 +40,26 @@ const Board: React.FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
     if (winner) {
         status = 'Winner: ' + winner;
     } else {
-        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+        status = 'Current player: ' + (xIsNext ? 'X' : 'O');
     }
 
     return (
         <>
             <div className="status">{status}</div>
             <div className="board-row">
-                <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-                <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-                <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+                <Square borderClassName="square-border-bottom square-border-right" value={squares[0]} onSquareClick={() => handleClick(0)} />
+                <Square borderClassName="square-border-left square-border-bottom square-border-right" value={squares[1]} onSquareClick={() => handleClick(1)} />
+                <Square borderClassName="square-border-bottom square-border-left" value={squares[2]} onSquareClick={() => handleClick(2)} />
             </div>
             <div className="board-row">
-                <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-                <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-                <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+                <Square borderClassName="square-border-bottom square-border-top square-border-right" value={squares[3]} onSquareClick={() => handleClick(3)} />
+                <Square borderClassName="square-border-all" value={squares[4]} onSquareClick={() => handleClick(4)} />
+                <Square borderClassName="square-border-bottom square-border-top square-border-left" value={squares[5]} onSquareClick={() => handleClick(5)} />
             </div>
             <div className="board-row">
-                <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-                <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-                <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+                <Square borderClassName="square-border-top square-border-right" value={squares[6]} onSquareClick={() => handleClick(6)} />
+                <Square borderClassName="square-border-left square-border-right square-border-top" value={squares[7]} onSquareClick={() => handleClick(7)} />
+                <Square borderClassName="square-border-left square-border-top" value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div>
         </>
     );
@@ -66,10 +68,12 @@ const Board: React.FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
 const TicTacToe = () => {
     const [history, setHistory] = useState([Array(9).fill(null)]);
     const [currentMove, setCurrentMove] = useState(0);
+    const [gameStarted, setGameStarted] = useState(false);
     const xIsNext = currentMove % 2 === 0;
     const currentSquares = history[currentMove];
 
     function handlePlay(nextSquares: string[]) {
+        setGameStarted(true);
         const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
         setHistory(nextHistory);
         setCurrentMove(nextHistory.length - 1);
@@ -79,7 +83,7 @@ const TicTacToe = () => {
         setCurrentMove(nextMove);
     }
 
-    const moves = history.map((squares, move) => {
+    const moves = history.map((_, move) => {
         let description;
         if (move > 0) {
             description = 'Go to move #' + move;
@@ -98,9 +102,14 @@ const TicTacToe = () => {
             <div className="game-board">
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
             </div>
-            <div className="game-info">
-                <ol>{moves}</ol>
-            </div>
+            <Card className="game-info">
+                <Card.Body>
+                    <Card.Title>Game Info</Card.Title>
+                    <Card.Text>
+                        {gameStarted ? <ol>{moves}</ol> : "Click or tap on a square to start playing"}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         </div>
     );
 }
