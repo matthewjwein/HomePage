@@ -4,20 +4,21 @@ import { Link } from "react-router-dom";
 
 interface ProjectProps {
     id: number;
-    title: string;
+    dateText: string;
+    titleText: string;
 }
 
-const Post: React.FC<ProjectProps> = ({ id, title }) => {
+const Post: React.FC<ProjectProps> = ({ id, dateText, titleText }) => {
     return (
         <Card
             bg="light"
-            key={title}
+            key={dateText}
             text="dark"
             className="project-card"
         >
-            <Card.Header>{title}</Card.Header>
+            <Card.Header>{dateText}</Card.Header>
             <Card.Body>
-                <Card.Title>Coming Soon</Card.Title>
+                <Card.Title>{titleText}</Card.Title>
                 <Card.Text>
                     <Link to={`/project/${id}`}>View</Link>
                 </Card.Text>

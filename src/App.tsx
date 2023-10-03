@@ -3,17 +3,19 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import { Routes, Route } from "react-router-dom";
-import Project1 from './components/projects/1/app';
-import Project2 from './components/projects/2/app';
+import Project1 from './components/projects/1/App';
+import Project2 from './components/projects/2/App';
 
 const projects = [
   {
     id: 1,
-    title: 'Oct 1 - Oct 7'
+    dateText: 'Oct 1 - Oct 7',
+    titleText: 'TicTacToe in TypeScript'
   },
   {
     id: 2,
-    title: 'Oct 8 - Oct 14'
+    dateText: 'Oct 8 - Oct 14',
+    titleText: 'Coming Soon'
   },
 ];
 

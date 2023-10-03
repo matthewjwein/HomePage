@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 import Card from 'react-bootstrap/Card';
 
 interface ProjectListProps {
-    projects: { id: number, title: string }[];
+    projects: { id: number, dateText: string, titleText: string }[];
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
@@ -16,7 +16,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
             <Card.Body>
                 <Card.Text className="project-card-wrapper">
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} id={project.id} title={project.title} />
+                        <ProjectCard key={index} id={project.id} dateText={project.dateText} titleText={project.titleText} />
                     ))}
                 </Card.Text>
             </Card.Body>

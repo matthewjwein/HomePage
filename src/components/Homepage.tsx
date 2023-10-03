@@ -2,9 +2,8 @@ import React from 'react';
 import ProjectList from './ProjectList'
 
 interface ProjectListProps {
-    projects: { id: number, title: string }[];
+    projects: { id: number, dateText: string, titleText: string }[];
 }
-
 
 const Post: React.FC<ProjectListProps> = ({ projects }) => {
     return (
