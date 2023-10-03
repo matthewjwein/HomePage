@@ -7,7 +7,7 @@ interface PianoKeyProps {
 
 const PianoKey: React.FC<PianoKeyProps> = ({ type, key }) => {
     return (
-        <div className={type == "white" ? "piano-key-white" : "piano-key-black"}></div>
+        <div className={type === "white" ? "piano-key-white" : "piano-key-black"}></div>
     );
 };
 
