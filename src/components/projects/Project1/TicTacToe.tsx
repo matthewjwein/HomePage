@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import './TicTacToe.css';
 
 interface SquareProps {
     value: string;

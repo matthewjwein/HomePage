@@ -3,21 +3,8 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import { Routes, Route } from "react-router-dom";
-import Project1 from './components/projects/Project1/App';
-import Project2 from './components/projects/Project2/App';
-
-const projects = [
-  {
-    id: 1,
-    dateText: 'Oct 1 - Oct 7',
-    titleText: 'TicTacToe in TypeScript'
-  },
-  {
-    id: 2,
-    dateText: 'Oct 8 - Oct 14',
-    titleText: 'Coming Soon'
-  },
-];
+import Project from './components/Project';
+import { ProjectData } from './ProjectData';
 
 function App(): JSX.Element {
   return (
@@ -25,9 +12,9 @@ function App(): JSX.Element {
       <Navbar />
       <div className="project-wrapper">
         <Routes>
-          <Route path="/" element={<Homepage projects={projects} />} />
-          <Route path="/project/1" element={<Project1 />} />
-          <Route path="/project/2" element={<Project2 />} />
+          <Route path="/" element={<Homepage projects={ProjectData} />} />
+          <Route path="/project/1" element={<Project title={ProjectData[0].titleText} component={ProjectData[0].component} />} />
+          <Route path="/project/2" element={<Project title={ProjectData[1].titleText} component={<div>Coming Soon</div>} />} />
         </Routes>
       </div>
     </div>

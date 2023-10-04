@@ -2,6 +2,10 @@ body {
   font-size: calc(10px + 2vmin);
 }
 
+a {
+  text-decoration: none;
+}
+
 .navbar {
   background-color: #ddd;
   padding: 5px;
