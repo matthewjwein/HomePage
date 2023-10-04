@@ -9,7 +9,8 @@ const Post: React.FC<ProjectListProps> = ({ projects }) => {
     return (
         <div>
             <p className="introduction">
-                Hi. I'm developing a project a week, starting with this website to showcase these projects.
+                <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
+                Hi. I'm going to be developing a project a week, starting with this website to showcase these projects.
             </p>
             <ProjectList projects={projects} />
         </div>

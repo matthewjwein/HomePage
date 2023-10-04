@@ -6,6 +6,36 @@ a {
   text-decoration: none;
 }
 
+/* Define the animation keyframes */
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.profile-picture {
+  width: 300px;
+  border-radius: 150px;
+  border: 5px solid #ddd;
+  animation: rotateBackAndForth 2s linear infinite;
+}
+
 .navbar {
   background-color: #ddd;
   padding: 5px;
