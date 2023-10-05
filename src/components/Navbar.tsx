@@ -13,9 +13,11 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="page-links">
+                <Link to='/'>
+                    <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
+                </Link>
                 <button onClick={() => { setNextRandomProjectID(rand(1, 2)) }}>
                     <Link to={`/project/${nextRandomProjectID}`}>
-                        <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
                         Check out a Random Project
                     </Link>
                 </button>

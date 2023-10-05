@@ -20,7 +20,7 @@ button {
   }
 
   25% {
-    transform: rotate(3deg);
+    transform: rotate(7deg);
   }
 
   50% {
@@ -28,7 +28,7 @@ button {
   }
 
   75% {
-    transform: rotate(-3deg);
+    transform: rotate(-7deg);
   }
 
   100% {
