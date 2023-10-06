@@ -13,14 +13,12 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="page-links">
-                <Link to='/'>
-                    <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
-                </Link>
-                <button onClick={() => { setNextRandomProjectID(rand(1, 2)) }}>
+                <img className="profile" src="/profile.jpg" alt="profile"></img>
+                {/*<button onClick={() => { setNextRandomProjectID(rand(1, 2)) }}>
                     <Link to={`/project/${nextRandomProjectID}`}>
                         Check out a Random Project
                     </Link>
-                </button>
+                </button>*/}
             </div>
             <div className="external-links">
                 <Link to="https://github.com/matthewjwein" target="_blank">
