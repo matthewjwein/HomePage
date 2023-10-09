@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 interface ProjectListProps {
     projects: { id: number, dateText: string, titleText: string }[];
@@ -10,10 +12,13 @@ const Post: React.FC<ProjectListProps> = ({ projects }) => {
             <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
             <div className="introduction">
                 <p>
-                    Hi. This website is under construction.
+                    Hi.
                 </p>
                 <p>
-                    This website is developed with React and Typescript, hosted using Netlify.
+                    <FontAwesomeIcon icon={faTriangleExclamation} /> This website is under construction <FontAwesomeIcon icon={faTriangleExclamation} />
+                </p>
+                <p>
+                    Developed with React and Typescript, hosted on Netlify.
                 </p>
                 <p>
                     Check back soon :)
