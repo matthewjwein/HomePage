@@ -1,5 +1,4 @@
 import React from 'react';
-import ProjectList from './ProjectList'
 
 interface ProjectListProps {
     projects: { id: number, dateText: string, titleText: string }[];
