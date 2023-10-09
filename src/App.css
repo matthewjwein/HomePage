@@ -13,6 +13,12 @@ button {
   border: 1px solid #bbb;
 }
 
+.resume {
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+}
+
 /* Define the animation keyframes */
 @keyframes rotateBackAndForth {
   0% {
@@ -20,7 +26,7 @@ button {
   }
 
   25% {
-    transform: rotate(7deg);
+    transform: rotate(1deg);
   }
 
   50% {
@@ -28,7 +34,7 @@ button {
   }
 
   75% {
-    transform: rotate(-7deg);
+    transform: rotate(-1deg);
   }
 
   100% {
@@ -37,8 +43,10 @@ button {
 }
 
 .profile-picture {
-  width: 80px;
-  border-radius: 40px;
+  display: block;
+  margin: auto;
+  width: 250px;
+  border-radius: 125px;
   border: 5px solid #ddd;
   animation: rotateBackAndForth 2s linear infinite;
 }

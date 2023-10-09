@@ -8,11 +8,22 @@ interface ProjectListProps {
 const Post: React.FC<ProjectListProps> = ({ projects }) => {
     return (
         <div>
-            <p className="introduction">
-                Hi. I'm developing a project a week to learn React and TypeScript, starting with this website to demonstrate these skills.
-            </p>
-            <ProjectList projects={projects} />
-        </div>
+            <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
+            <div className="introduction">
+                <p>
+                    Hi. This website is under construction.
+                </p>
+                <p>
+                    This website is developed with React and Typescript, hosted using Netlify.
+                </p>
+                <p>
+                    Check back soon :)
+                </p>
+            </div>
+            {
+                //<ProjectList projects={projects} />
+            }
+        </div >
     );
 };
 
