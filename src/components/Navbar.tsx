@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHomeUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
     faLinkedin,
@@ -40,7 +40,7 @@ const Navbar = () => {
                         <nav>
                             <HStack spacing={8}>
                                 <Link to="/">
-                                <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
+                                    <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
                                 </Link>
                             </HStack>
                         </nav>
