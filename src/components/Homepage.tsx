@@ -8,7 +8,6 @@ interface ProjectListProps {
 const Post: React.FC<ProjectListProps> = ({ projects }) => {
     return (
         <div>
-            <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
             <div className="introduction">
                 <Card>
                     <img className="resume" alt="resume" src="./resume.png"></img>

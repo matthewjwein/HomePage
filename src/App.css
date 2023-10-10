@@ -45,11 +45,10 @@ button {
 .profile-picture {
   display: block;
   margin: auto;
-  width: 250px;
-  border-radius: 125px;
-  border: 5px solid #ddd;
+  width: 70px;
+  border-radius: 35px;
+  border: 4px solid #0d6efd;
   animation: rotateBackAndForth 4s linear infinite;
-  margin-top: -10px;
 }
 
 .navbar {

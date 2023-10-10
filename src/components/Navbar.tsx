@@ -40,7 +40,7 @@ const Navbar = () => {
                         <nav>
                             <HStack spacing={8}>
                                 <Link to="/">
-                                    <FontAwesomeIcon icon={faHomeUser} size="2x" ></FontAwesomeIcon>
+                                <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
                                 </Link>
                             </HStack>
                         </nav>
