@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import Card from 'react-bootstrap/Card';
 
 interface ProjectListProps {
     projects: { id: number, dateText: string, titleText: string }[];
@@ -11,18 +12,9 @@ const Post: React.FC<ProjectListProps> = ({ projects }) => {
         <div>
             <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
             <div className="introduction">
-                <p>
-                    Hi.
-                </p>
-                <p>
-                    <FontAwesomeIcon icon={faTriangleExclamation} /> This website is under construction <FontAwesomeIcon icon={faTriangleExclamation} />
-                </p>
-                <p>
-                    Developed with React and Typescript, hosted on Netlify.
-                </p>
-                <p>
-                    Check back soon :)
-                </p>
+                <Card>
+                    <img className="resume" alt="resume" src="./resume.png"></img>
+                </Card>
             </div>
             {
                 //<ProjectList projects={projects} />

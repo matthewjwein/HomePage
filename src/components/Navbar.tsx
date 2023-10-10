@@ -46,8 +46,6 @@ const Navbar = () => {
                         </nav>
                         <nav>
                             <HStack spacing={8}>
-                                <Link to="./resume">Resume</Link>
-                                <hr />
                                 {socials.map((social) => {
                                     return <a target="_blank" rel="noreferrer" key={social.url} href={social.url}>
                                         <FontAwesomeIcon icon={social.icon} size="2x" ></FontAwesomeIcon>
