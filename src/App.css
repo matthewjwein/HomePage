@@ -16,6 +16,7 @@ button {
 .resume {
   margin: auto;
   display: block;
+  width: 100%;
 }
 
 /* Define the animation keyframes */

@@ -13,7 +13,7 @@ const Post: React.FC<ProjectListProps> = ({ projects }) => {
             <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
             <div className="introduction">
                 <p>
-                    <FontAwesomeIcon icon={faTriangleExclamation} /> Hi. This website is under construction, check back soon <FontAwesomeIcon icon={faTriangleExclamation} />
+                    <FontAwesomeIcon icon={faTriangleExclamation} /> Hi. This website is under construction. Check back soon :) <FontAwesomeIcon icon={faTriangleExclamation} />
                 </p>
                 <Card>
                     <img className="resume" alt="resume" src="./resume.png"></img>
