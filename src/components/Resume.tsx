@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Box } from "@chakra-ui/react";
-
 import {
+    Box,
     Container,
     Typography,
     List,
