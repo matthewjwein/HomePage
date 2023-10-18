@@ -2,6 +2,7 @@
   "name": "homepage",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@chakra-ui/react": "^2.8.1",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
