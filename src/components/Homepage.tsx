@@ -2,10 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Resume from './Resume';
 
-interface ProjectListProps {
-    projects: { id: number, dateText: string, titleText: string }[];
-}
-
 const resumeData = {
     fullName: "Matthew Wein",
     email: "matthewjwein@gmail.com",
@@ -69,7 +65,7 @@ const resumeData = {
     ],
 };
 
-const Post: React.FC<ProjectListProps> = ({ projects }) => {
+const Post: React.FC = () => {
     return (
         <div>
             <div className="introduction">
@@ -77,9 +73,6 @@ const Post: React.FC<ProjectListProps> = ({ projects }) => {
                     <Resume {...resumeData} />
                 </Card>
             </div>
-            {
-                //<ProjectList projects={projects} />
-            }
         </div >
     );
 };
