@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import * as THREE from 'three'
 import gsap from 'gsap'
-import { render } from '@testing-library/react'
 
 function App(): JSX.Element {
 
