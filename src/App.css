@@ -22,14 +22,18 @@ button {
 .profile-picture {
   display: block;
   margin: auto;
-  width: 70px;
-  border-radius: 15px;
+  width: 40px;
+  border-radius: 10px;
   border: 2px solid #0d6efd;
 }
 
 .navbar {
   background-color: #18181b;
-  padding: 5px;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 65px;
 }
 
 .navbar .page-links {
@@ -52,6 +56,10 @@ button {
 
 .project-list-label {
   text-align: left;
+}
+
+.project-wrapper {
+  margin-top: 65px;
 }
 
 .project-list-card .project-card-wrapper {
