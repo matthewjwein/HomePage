@@ -22,8 +22,8 @@ button {
 .profile-picture {
   display: block;
   margin: auto;
-  width: 40px;
-  border-radius: 10px;
+  width: 60px;
+  border-radius: 20px;
   border: 2px solid #0d6efd;
 }
 
@@ -52,6 +52,12 @@ button {
   align-items: center;
   justify-content: center;
   padding: 50px;
+}
+
+.webgl {
+  outline: none;
+  position: fixed;
+  right: 0;
 }
 
 .project-list-label {

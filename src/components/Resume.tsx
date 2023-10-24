@@ -71,11 +71,9 @@ const Resume: React.FC<ResumeProps> = (props) => {
         <Container maxWidth="sm">
             <Box padding="50px" textAlign="center">
                 <Typography variant="h4">{props.fullName}</Typography>
-                <Typography textAlign="center" variant="body2" align="right">
-                    <div>{props.email}</div>
-                    <div>{props.phoneNumber}</div>
-                    <div>{props.address}</div>
-                </Typography>
+                <Typography textAlign="center" variant="body2" align="right">{props.email}</Typography>
+                <Typography textAlign="center" variant="body2" align="right">{props.phoneNumber}</Typography>
+                <Typography textAlign="center" variant="body2" align="right">{props.address}</Typography>
             </Box>
 
             <List>

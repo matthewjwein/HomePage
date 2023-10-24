@@ -70,18 +70,16 @@ const resumeData = {
 };
 
 const Post: React.FC<ProjectListProps> = ({ projects }) => {
-    return (
-        <div>
-            <div className="introduction">
-                <Card>
-                    <Resume {...resumeData} />
-                </Card>
-            </div>
-            {
-                //<ProjectList projects={projects} />
-            }
-        </div >
-    );
+    return <div>
+        <div className="introduction">
+            <Card>
+                <Resume {...resumeData} />
+            </Card>
+        </div>
+        {
+            //<ProjectList projects={projects} />
+        }
+    </div >;
 };
 
 export default Post;
