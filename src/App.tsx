@@ -11,8 +11,8 @@ function App(): JSX.Element {
 
     const parameters = {
       materialColor: '#0e6ffd',
-      animationSpeedX: 0.05,
-      animationSpeedY: 0.2,
+      animationSpeedX: 0.01,
+      animationSpeedY: 0.04,
     }
 
     const profilePictureEl = document.querySelector('img.profile-picture')
