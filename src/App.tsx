@@ -2,7 +2,6 @@ import './App.css'
 import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import * as THREE from 'three'
-import gsap from 'gsap'
 import Homepage from './components/Homepage'
 
 function App(): JSX.Element {
