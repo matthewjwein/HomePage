@@ -19,6 +19,11 @@ button {
   width: 100%;
 }
 
+.card,
+.MuiPaper-root {
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .profile-picture {
   display: block;
   margin: auto;

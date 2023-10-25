@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import * as THREE from 'three'
 import gsap from 'gsap'
+import Homepage from './components/Homepage'
 
 function App(): JSX.Element {
 
@@ -11,7 +12,20 @@ function App(): JSX.Element {
 
     const parameters = {
       materialColor: '#0e6ffd',
+      animationSpeedX: 0.05,
+      animationSpeedY: 0.2,
     }
+
+    const profilePictureEl = document.querySelector('img.profile-picture')
+    profilePictureEl?.addEventListener('click', () => {
+      parameters.animationSpeedX = (Math.random() * 3) + 0.1
+      parameters.animationSpeedX = (Math.random() * 5) + 0.25
+    })
+
+    profilePictureEl?.addEventListener('tap', () => {
+      parameters.animationSpeedX = (Math.random() * .1) + 0.1
+      parameters.animationSpeedX = (Math.random() * .3) + 0.25
+    })
 
     /**
      * Base
@@ -104,27 +118,35 @@ function App(): JSX.Element {
      * Scroll
      */
     let scrollY = window.scrollY
-    let currentSection = 0
-
     window.addEventListener('scroll', () => {
       scrollY = window.scrollY
-      const newSection = Math.round(scrollY / sizes.height)
-
-      if (newSection !== currentSection) {
-        currentSection = newSection
-
-        gsap.to(
-          mesh.rotation,
-          {
-            duration: 1.5,
-            ease: 'power2.inOut',
-            x: '+=6',
-            y: '+=3',
-            z: '+=1.5'
-          }
-        )
-      }
     })
+
+    let isRotating = false;
+
+    // Start rotation on touchstart
+    document.addEventListener('touchstart', () => {
+      isRotating = true;
+    });
+
+    // Stop rotation on touchend
+    document.addEventListener('touchend', () => {
+      isRotating = false;
+    });
+
+    // You can also use touchmove to determine the direction of the gesture
+    document.addEventListener('touchmove', (event) => {
+      if (isRotating) {
+        // Calculate the direction and speed of the gesture
+        const touch = event.touches[0];
+        const centerX = window.innerWidth / 2;
+        const deltaY = touch.clientY - centerX;
+
+        // Rotate the mesh based on the gesture
+        mesh.rotation.x += deltaY * 0.0001; // Adjust the speed as needed
+      }
+    });
+
 
     /**
      * Cursor
@@ -159,8 +181,8 @@ function App(): JSX.Element {
       cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * deltaTime
 
       // Animate mesh
-      mesh.rotation.x += deltaTime * 0.05
-      mesh.rotation.y += deltaTime * 0.2
+      mesh.rotation.x += deltaTime * parameters.animationSpeedX
+      mesh.rotation.y += deltaTime * parameters.animationSpeedY
 
       // Render
       renderer.render(scene, camera)
@@ -177,6 +199,7 @@ function App(): JSX.Element {
       <Navbar />
       <div className="project-wrapper">
         <canvas className="webgl"></canvas>
+        <Homepage />
       </div>
     </div>
   );
