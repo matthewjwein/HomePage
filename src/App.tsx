@@ -17,13 +17,13 @@ function App(): JSX.Element {
 
     const profilePictureEl = document.querySelector('img.profile-picture')
     profilePictureEl?.addEventListener('click', () => {
-      parameters.animationSpeedX = (Math.random() * 3) + 0.1
-      parameters.animationSpeedX = (Math.random() * 5) + 0.25
+      parameters.animationSpeedX = Math.random()
+      parameters.animationSpeedX = Math.random()
     })
 
     profilePictureEl?.addEventListener('tap', () => {
-      parameters.animationSpeedX = (Math.random() * .1) + 0.1
-      parameters.animationSpeedX = (Math.random() * .3) + 0.25
+      parameters.animationSpeedX = Math.random()
+      parameters.animationSpeedX = Math.random()
     })
 
     /**
@@ -109,7 +109,7 @@ function App(): JSX.Element {
       alpha: true,
     })
     renderer.outputColorSpace = THREE.LinearSRGBColorSpace
-    renderer.setClearAlpha(0.65)
+    renderer.setClearAlpha(1)
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
@@ -174,8 +174,8 @@ function App(): JSX.Element {
       // Animate camera
       camera.position.y = - scrollY / sizes.height
 
-      const parallaxX = cursor.x * 0.5
-      const parallaxY = - cursor.y * 0.5
+      const parallaxX = cursor.x * 0.2
+      const parallaxY = - cursor.y * 0.2
       cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * deltaTime
       cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * deltaTime
 
