@@ -4,10 +4,11 @@ import Navbar from './components/Navbar'
 import { Canvas } from '@react-three/fiber'
 import Experience from './components/Experience'
 import { Html, useProgress } from '@react-three/drei'
+import { CircularProgress } from '@mui/material'
 
 function Loader() {
-  const { active, progress, errors, item, loaded, total } = useProgress();
-  return <Html center>{progress} % loaded</Html>;
+  const { progress } = useProgress();
+  return <Html center><CircularProgress color="inherit" value={progress} />{progress}%</Html>;
 }
 
 
