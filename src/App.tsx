@@ -11,7 +11,6 @@ function Loader() {
   return <Html center><CircularProgress color="inherit" value={progress} />{progress}%</Html>;
 }
 
-
 function App(): JSX.Element {
   return (
     <>
@@ -20,6 +19,7 @@ function App(): JSX.Element {
         className="canvas"
         camera={{
           fov: 45,
+          zoom: Math.min(1000, window.innerWidth * 0.8) / 1000,
           near: 0.1,
           far: 2000,
           position: [-3, 1.5, 4]
