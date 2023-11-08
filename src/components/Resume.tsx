@@ -49,7 +49,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
     };
 
     const renderSection = (sectionName: keyof typeof showContent, content: React.ReactNode) => (
-        <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.3)', padding: '16px', marginBottom: '16px' }}>
+        <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.7)', padding: '16px', marginBottom: '16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Typography onClick={() => toggleSection(sectionName)} variant="h5" style={{ cursor: 'pointer' }}>
                     {sectionName}
@@ -67,7 +67,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
 
     return (
         <Container>
-            <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.3)', padding: '16px', marginTop: '16px', marginBottom: '16px' }}>
+            <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.7)', padding: '16px', marginTop: '16px', marginBottom: '16px' }}>
                 <Typography variant="h4">{props.fullName}</Typography>
                 <List>
                     <ListItem>
