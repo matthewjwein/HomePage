@@ -3,7 +3,7 @@
   height: 650px;
   border: none;
   overflow-y: scroll;
-  background: linear-gradient(-45deg, #f79f41, #c73d14);
+  background: linear-gradient(-45deg, #24bbe9, #0f586e);
   background-size: 400% 400%;
   animation: gradient 5s ease-in-out infinite;
 }

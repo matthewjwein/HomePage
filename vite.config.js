@@ -1,5 +1,4 @@
 import react from '@vitejs/plugin-react'
-import { transformWithEsbuild } from 'vite'
 
 const ViteConfig = {
     root: 'src/',
