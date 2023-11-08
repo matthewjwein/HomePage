@@ -1,4 +1,4 @@
-import { PresentationControls, Float, Environment, useGLTF, ContactShadows, Html } from '@react-three/drei'
+import { PresentationControls, Float, useGLTF, ContactShadows, Html } from '@react-three/drei'
 import Resume from './Resume';
 import ResumeData from './ResumeData';
 
