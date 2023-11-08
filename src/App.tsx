@@ -1,8 +1,15 @@
 import './App.css'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Navbar from './components/Navbar'
 import { Canvas } from '@react-three/fiber'
 import Experience from './components/Experience'
+import { Html, useProgress } from '@react-three/drei'
+
+function Loader() {
+  const { active, progress, errors, item, loaded, total } = useProgress();
+  return <Html center>{progress} % loaded</Html>;
+}
+
 
 function App(): JSX.Element {
   return (
@@ -17,7 +24,9 @@ function App(): JSX.Element {
           position: [-3, 1.5, 4]
         }}
       >
-        <Experience />
+        <Suspense fallback={<Loader />}>
+          <Experience />
+        </Suspense>
       </Canvas>
     </>
   );

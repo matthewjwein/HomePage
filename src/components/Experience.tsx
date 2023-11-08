@@ -6,10 +6,6 @@ function Experience(): JSX.Element {
     const computer = useGLTF("https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf")
 
     return (<>
-        <Environment preset="city" />
-
-        <color args={["#24bbe9"]} attach="background" />
-
         <PresentationControls
             global
             rotation={[0.13, 0.1, 0]}
