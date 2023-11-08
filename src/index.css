@@ -1,11 +1,15 @@
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body,
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: ivory;
+  color-scheme: dark;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.canvas {
+  touch-action: none;
 }

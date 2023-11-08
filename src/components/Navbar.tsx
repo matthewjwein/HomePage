@@ -39,9 +39,7 @@ const Navbar = () => {
                     >
                         <nav>
                             <HStack spacing={8}>
-                                <Link to="/">
-                                    <img className="profile-picture" src="/profile.jpg" alt="profile"></img>
-                                </Link>
+
                             </HStack>
                         </nav>
                         <nav>

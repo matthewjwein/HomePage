@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-    Box,
     Container,
     Typography,
     List,
@@ -22,7 +21,6 @@ interface ResumeProps {
         role: string;
         company: string;
         date: string;
-        accomplishments: string[];
     }[];
     projects: {
         title: string;
@@ -51,7 +49,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
     };
 
     const renderSection = (sectionName: keyof typeof showContent, content: React.ReactNode) => (
-        <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.7)', padding: '16px', marginBottom: '16px' }}>
+        <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.3)', padding: '16px', marginBottom: '16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Typography onClick={() => toggleSection(sectionName)} variant="h5" style={{ cursor: 'pointer' }}>
                     {sectionName}
@@ -68,21 +66,16 @@ const Resume: React.FC<ResumeProps> = (props) => {
     );
 
     return (
-        <Container maxWidth="sm">
-            <Box padding="50px" textAlign="center">
+        <Container>
+            <Paper elevation={3} style={{ background: 'rgba(255, 255, 255, 0.3)', padding: '16px', marginTop: '16px', marginBottom: '16px' }}>
                 <Typography variant="h4">{props.fullName}</Typography>
-                <Typography textAlign="center" variant="body2" align="right">{props.email}</Typography>
-                <Typography textAlign="center" variant="body2" align="right">{props.phoneNumber}</Typography>
-                <Typography textAlign="center" variant="body2" align="right">{props.address}</Typography>
-            </Box>
-
-            <List>
-                <ListItem>
-                    <ListItemText primary="Languages" secondary={props.languages} />
-                    <ListItemText primary="Technologies" secondary={props.technologies} />
-                </ListItem>
-            </List>
-
+                <List>
+                    <ListItem>
+                        <ListItemText primary="Languages" secondary={props.languages} />
+                        <ListItemText primary="Technologies" secondary={props.technologies} />
+                    </ListItem>
+                </List>
+            </Paper>
             {renderSection('Employment History', (
                 <List>
                     {props.employmentHistory.map((item, index) => (
@@ -91,11 +84,6 @@ const Resume: React.FC<ResumeProps> = (props) => {
                                 <ListItemText
                                     primary={`${item.role} at ${item.company}, ${item.date}`}
                                 />
-                                {item.accomplishments.map((accomplishment, i) => (
-                                    <ListItem key={i}>
-                                        <ListItemText secondary={" - " + accomplishment} />
-                                    </ListItem>
-                                ))}
                             </List>
                         </ListItem>
                     ))}
