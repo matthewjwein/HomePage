@@ -3,7 +3,7 @@ import React, { Suspense } from 'react'
 import Navbar from './components/Navbar'
 import { Canvas } from '@react-three/fiber'
 import Experience from './components/Experience'
-import { Html, useProgress } from '@react-three/drei'
+import { Html, OrbitControls, useProgress } from '@react-three/drei'
 import { CircularProgress } from '@mui/material'
 
 function Loader() {
@@ -19,7 +19,7 @@ function App(): JSX.Element {
         className="canvas"
         camera={{
           fov: 45,
-          zoom: Math.min(1000, window.innerWidth) / 1000,
+          zoom: Math.min(1000, window.innerWidth * .2) / 1000,
           near: 0.1,
           far: 2000,
           position: [-3, 1.5, 4]
@@ -28,6 +28,7 @@ function App(): JSX.Element {
         <Suspense fallback={<Loader />}>
           <Experience />
         </Suspense>
+        <OrbitControls />
       </Canvas>
     </>
   );
