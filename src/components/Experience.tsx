@@ -1,5 +1,5 @@
 import { CircularProgress } from '@mui/material';
-import { Text, Float, useGLTF, ContactShadows, Html } from '@react-three/drei'
+import { Float, useGLTF, ContactShadows, Html } from '@react-three/drei'
 import { useRef, useState } from 'react';
 import Resume from './Resume';
 import ResumeData from './ResumeData';
@@ -45,16 +45,6 @@ function Experience(): JSX.Element {
                     </div>
                 </Html>
             </primitive>
-            <Text
-                font="./bangers-v20-latin-regular.woff"
-                fontSize={1}
-                position={[2, 0.75, 0.75]}
-                rotation-y={- 1.25}
-                maxWidth={2}
-                color={"black"}
-            >
-                Hello, World!
-            </Text>
         </Float>
 
         <ContactShadows
