@@ -6,7 +6,7 @@ export default create(subscribeWithSelector((set) => {
         /**
          * OPTIONS
          */
-        blocksCount: 20,
+        blocksCount: 5,
         blocksSeed: 0,
 
         /**

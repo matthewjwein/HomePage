@@ -83,7 +83,7 @@ export default function Player() {
             unsubscribeKeys()
             unsubscribeAny()
         }
-    }, [])
+    })
 
     useFrame((state, delta) => {
         if (!body.current) {
