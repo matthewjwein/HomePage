@@ -6,7 +6,6 @@ import * as THREE from "three";
 import useGame from "./stores/useGame";
 
 export default function Player() {
-    console.log('here')
     const start = useGame((state) => state.start)
     const end = useGame((state) => state.end)
     const restart = useGame((state) => state.restart)

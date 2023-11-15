@@ -12,16 +12,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<ProjectList projects={ProjectData} />} />
-        {ProjectData.map((project) => {
-          return <Route
-            key={project.id}
-            path={`/project/${project.id}`}
-            element={<Project
-              title={project.titleText}
-              component={project.component}
-            />}
-          />
-        })}
+        <Route
+          path={`/project/:id`}
+          element={<Project />}
+        />
       </Routes>
     </>
   );

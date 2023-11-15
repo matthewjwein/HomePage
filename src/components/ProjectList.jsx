@@ -4,15 +4,15 @@ import ProjectCard from './ProjectCard';
 const ProjectList = ({ projects }) => {
     return (
         <div className="project-list-wrapper">
-            {projects.map((project, index) => (
-                <ProjectCard
-                    key={index}
-                    id={project.id}
+            {Object.entries(projects).map(([key, project]) => {
+                return <ProjectCard
+                    key={key}
+                    id={key}
                     imagePath={project.imagePath}
                     titleText={project.titleText}
                     dateText={project.dateText}
                 />
-            ))}
+            })}
         </div>
     );
 };

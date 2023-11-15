@@ -1,20 +1,18 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import { Button } from '@mui/material';
+import { useParams } from "react-router-dom";
+import { ProjectData } from './ProjectData'
 
-interface ProjectProps {
-    title: string
-    component: ReactNode
-}
-
-const Project: React.FC<ProjectProps> = ({ title, component }) => {
+const Project = () => {
+    const { id } = useParams()
     return (
         <>
             <Link to="/">
                 <Button><IoIosArrowRoundBack /> Go Back</Button>
             </Link>
-            {component}
+            {ProjectData[id] ? ProjectData[id].component : <div>Project Not Found!</div>}
         </>
     );
 };
