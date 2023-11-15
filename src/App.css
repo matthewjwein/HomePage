@@ -1,13 +1,3 @@
-.resume-wrapper {
-  width: 1000px;
-  height: 650px;
-  border: none;
-  overflow-y: scroll;
-  background: linear-gradient(-45deg, #24bbe9, #0f586e);
-  background-size: 400% 400%;
-  animation: gradient 5s ease-in-out infinite;
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -36,4 +26,24 @@
 .navbar .external-links {
   float: right;
   padding: 5px;
+}
+
+.project-list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: .5rem;
+  padding: 25px;
+}
+
+.project-card {
+  width: 18rem;
+  border: 3px solid #fff;
+}
+
+.project-card .view-button {
+  float: right;
+}
+
+.project {
+  height: 100%;
 }

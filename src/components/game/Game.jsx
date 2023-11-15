@@ -1,4 +1,4 @@
-import './style.css'
+import './Game.css'
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience'

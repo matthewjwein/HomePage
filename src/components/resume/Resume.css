@@ -1,0 +1,9 @@
+.resume-wrapper {
+    width: 1000px;
+    height: 650px;
+    border: none;
+    overflow-y: scroll;
+    background: linear-gradient(-45deg, #24bbe9, #0f586e);
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in-out infinite;
+}
