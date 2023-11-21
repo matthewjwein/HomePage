@@ -46,7 +46,7 @@ export default function Interface() {
         {phase === "ended" && <div onClick={restart} className="restart">Restart</div>}
 
         {/* Controls */}
-        <div className="controls">
+        <div className="keyboard-controls">
             <div className="raw">
                 <div className={`key ${forward ? 'active' : ''}`}></div>
             </div>

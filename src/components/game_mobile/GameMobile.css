@@ -57,30 +57,11 @@ body,
 /**
  * Controls
  */
-.keyboard-controls {
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    width: 100%;
-}
-
-.keyboard-controls .raw {
-    display: flex;
-    justify-content: center;
-}
-
-.keyboard-controls .key {
-    width: 40px;
-    height: 40px;
-    margin: 4px;
-    border: 2px solid #ffffff;
-    background: #ffffff44;
-}
-
-.keyboard-controls .key.large {
-    width: 144px;
-}
-
-.keyboard-controls .key.active {
-    background: #ffffff99;
+.controls {
+    position: fixed;
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    margin-left: -50px;
 }

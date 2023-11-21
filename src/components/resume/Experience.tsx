@@ -1,15 +1,9 @@
-import { CircularProgress } from '@mui/material';
 import { PresentationControls, Float, useGLTF, ContactShadows, Html } from '@react-three/drei'
-import { useState } from 'react';
 import Resume from './ResumeHtml';
 import ResumeData from './ResumeData';
 
 function Experience(): JSX.Element {
     const computer = useGLTF("https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf")
-
-    const [isLoading, setIsLoading] = useState(true)
-
-    setTimeout(() => { setIsLoading(false) }, 1000)
     return (<>
         <PresentationControls
             global
@@ -39,13 +33,7 @@ function Experience(): JSX.Element {
                         rotation-x={-0.256}
                     >
                         <div className="resume-wrapper">
-                            {isLoading ?
-                                <div style={{ display: 'flex', marginTop: '300px', justifyContent: 'center' }}>
-                                    <CircularProgress className="resume-progress-loader" color="inherit" />
-                                </div>
-                                :
-                                <Resume {...ResumeData} />
-                            }
+                            <Resume {...ResumeData} />
                         </div>
                     </Html>
                 </primitive>
