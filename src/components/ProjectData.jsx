@@ -11,7 +11,7 @@ export const ProjectData = {
     2: {
         dateText: 'Nov 21 - Nov 28',
         titleText: 'Game (Mobile)',
-        imagePath: "./game.jpg",
+        imagePath: "./game_mobile.jpeg",
         component: <GameMobile />
     },
 };

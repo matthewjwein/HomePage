@@ -12,10 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<ProjectList projects={ProjectData} />} />
-        <Route
-          path={`/project/:id`}
-          element={<Project />}
-        />
+        <Route path="/project/1" element={<Project id={1} />} />
+        <Route path="/project/2" element={<Project id={2} />} />
       </Routes>
     </>
   );

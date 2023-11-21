@@ -19,7 +19,6 @@ const ProjectCard: React.FC<ProjectProps> = ({ id, imagePath, titleText, dateTex
             <CardActionArea component={RouterLink} to={`/project/${id}`}>
                 <CardMedia
                     component="img"
-                    height="140"
                     image={`./${imagePath}`}
                     alt="game screenshot"
                 />
