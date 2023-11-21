@@ -22,6 +22,12 @@ const Game2D = () => {
         setJumpFlag(true)
     }
 
+    const handleTouchStart = (e) => {
+        if (e.touches.length > 1) {
+            setJumpFlag(true)
+        }
+    }
+
     return <>
         <div className="controls">
             <Joystick
@@ -35,6 +41,7 @@ const Game2D = () => {
         <Suspense>
             <Canvas
                 onClick={handleClick}
+                onTouchStart={handleTouchStart}
                 shadows
                 camera={{
                     fov: 45,

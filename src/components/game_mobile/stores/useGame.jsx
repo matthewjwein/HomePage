@@ -28,7 +28,6 @@ export default create(subscribeWithSelector((set) => {
 
         setJumpFlag: (jumpFlag) => {
             set((state) => {
-                console.log("setting jump flag", jumpFlag)
                 // Ignore update if player is already jumping
                 if (state.jumpFlag === true && jumpFlag === true) {
                     return {}
