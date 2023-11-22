@@ -41,11 +41,11 @@ export default function Interface() {
 
         {/* Instructions */}
         {phase === "ready" && <div className="instructions">
-            use the joystick to move the ball
+            Use the joystick to move the ball
             <br />
-            tap the screen elsewhere to jump
+            Tap the screen elsewhere to jump
             <br />
-            get to the end as fast as possible
+            Get to the end as fast as possible
         </div>}
 
         {/* Restart */}

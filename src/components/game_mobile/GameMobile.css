@@ -53,8 +53,9 @@ body,
 
 .instructions {
     top: 35%;
-    font-size: 4vh;
-    font-family: cursive;
+    font-size: 3vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 /**
