@@ -6,7 +6,7 @@ export default create(subscribeWithSelector((set) => {
         /**
          * OPTIONS
          */
-        blocksCount: 5,
+        blocksCount: 1,
         blocksSeed: 0,
 
         /**
@@ -14,6 +14,7 @@ export default create(subscribeWithSelector((set) => {
          */
         startTime: 0,
         endTime: 0,
+        fastestTime: null,
 
         /**
          * STATES
@@ -65,8 +66,12 @@ export default create(subscribeWithSelector((set) => {
         },
         end: () => {
             set((state) => {
+                const endTime = Date.now()
                 if (state.phase === 'playing') {
-                    return { phase: 'ended', endTime: Date.now() }
+                    if (!state.fastestTime || (endTime - state.startTime) < state.fastestTime) {
+                        return { phase: 'ended', endTime, fastestTime: endTime - state.startTime }
+                    }
+                    return { phase: 'ended', endTime }
                 }
                 return {}
             })

@@ -24,16 +24,35 @@ body,
 /**
  * Time
  */
-.time {
+.time,
+.instructions,
+.fastest-time {
     position: absolute;
-    top: 15%;
+
     left: 0;
     width: 100%;
     color: #ffffff;
-    font-size: 6vh;
-    background: #00000033;
     padding-top: 5px;
     text-align: center;
+}
+
+.time {
+    top: 15%;
+    background: #00000033;
+    font-size: 6vh;
+}
+
+.fastest-time {
+    top: 17%;
+    left: 20%;
+    color: green;
+    font-size: 3vh;
+}
+
+.instructions {
+    top: 35%;
+    font-size: 4vh;
+    font-family: cursive;
 }
 
 /**

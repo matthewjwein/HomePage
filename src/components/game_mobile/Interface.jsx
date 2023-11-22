@@ -7,6 +7,7 @@ export default function Interface() {
 
     const restart = useGame((state) => state.restart)
     const phase = useGame((state) => state.phase)
+    const fastestTime = useGame((state) => state.fastestTime)
 
     useEffect(() => {
         const unsubscribeEffect = addEffect(() => {
@@ -31,13 +32,23 @@ export default function Interface() {
         }
     }, [])
 
-    return <div >
-        <div className="interface">
-            {/* Time */}
-            <div ref={time} className="time">0.00</div>
+    console.log("fastest time", fastestTime)
+    return <div className="interface">
+        {/* Time */}
+        <div className="time" ref={time}>0.00</div>
 
-            {/* Restart */}
-            {phase === "ended" && <div onClick={restart} className="restart">Restart</div>}
-        </div>
-    </div>
+        {fastestTime && <div className="fastest-time" color="green">best: {(fastestTime / 1000).toFixed(2)}</div>}
+
+        {/* Instructions */}
+        {phase === "ready" && <div className="instructions">
+            use the joystick to move the ball
+            <br />
+            tap the screen elsewhere to jump
+            <br />
+            get to the end as fast as possible
+        </div>}
+
+        {/* Restart */}
+        {phase === "ended" && <div onClick={restart} className="restart">Restart</div>}
+    </div >
 }
