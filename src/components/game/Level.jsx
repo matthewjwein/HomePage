@@ -1,7 +1,9 @@
+import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { CuboidCollider, RigidBody } from '@react-three/rapier'
 import { useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
+import Resume from '../resume/ResumeHtml'
 
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
 
@@ -121,6 +123,21 @@ export function BlockAxe({ position = [0, 0, 0] }) {
 }
 
 export function BlockEnd({ position = [0, 0, 0] }) {
+    const model = useGLTF("https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/young-korrigan/model.gltf")
+    let mixer
+    if (model.animations.length) {
+        mixer = new THREE.AnimationMixer(model.scene);
+        mixer.clipAction(model.animations[1]).play()
+    }
+
+    model.scene.traverse(function (node) {
+        if (node.isMesh) { node.castShadow = true; }
+    });
+
+    useFrame((state, delta) => {
+        mixer?.update(delta)
+    })
+
     return <group position={position}>
         <mesh
             geometry={boxGeometry}
@@ -129,6 +146,9 @@ export function BlockEnd({ position = [0, 0, 0] }) {
             scale={[4, 0.2, 4]}
             receiveShadow
         />
+        <RigidBody type="fixed" colliders="hull" position={[0, 0, 0]} restitution={0.2} friction={0}>
+            <primitive object={model.scene} scale={5} />
+        </RigidBody>
     </group >
 }
 

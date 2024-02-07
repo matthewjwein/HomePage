@@ -1,6 +1,7 @@
 import { PresentationControls, Float, useGLTF, ContactShadows, Html } from '@react-three/drei'
 import Resume from './ResumeHtml';
 import ResumeData from './ResumeData';
+import Navbar from '../Navbar';
 
 function Experience(): JSX.Element {
     const computer = useGLTF("https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf")
@@ -33,7 +34,8 @@ function Experience(): JSX.Element {
                         rotation-x={-0.256}
                     >
                         <div className="resume-wrapper">
-                            <Resume {...ResumeData} />
+                            <Navbar />
+                            <img width="100%" src="resume.jpg"></img>
                         </div>
                     </Html>
                 </primitive>
