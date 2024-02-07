@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHome, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
     faLinkedin,
@@ -36,13 +36,20 @@ const Navbar = () => {
                         justifyContent="space-between"
                         alignItems="center"
                     >
+                        <a href="/">
+                            <FontAwesomeIcon icon={faHome} size="2x" ></FontAwesomeIcon>
+                        </a>
                         <nav>
-                            <HStack spacing={8}>
+                            <HStack spacing={4}>
 
                             </HStack>
                         </nav>
+                        <a href="/game">
+                            Fancy a Game? <FontAwesomeIcon icon={faGamepad} size="2x" ></FontAwesomeIcon>
+                        </a>
                         <nav>
                             <HStack spacing={8}>
+
                                 {socials.map((social) => {
                                     return <a target="_blank" rel="noreferrer" key={social.url} href={social.url}>
                                         <FontAwesomeIcon icon={social.icon} size="2x" ></FontAwesomeIcon>
