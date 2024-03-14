@@ -1,49 +1,12 @@
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .navbar {
-  background-color: #18181b;
   width: 100%;
-  height: auto;
+  padding: 5px;
 }
 
 .navbar .page-links {
-  padding: 5px;
   float: left;
 }
 
 .navbar .external-links {
   float: right;
-  padding: 5px;
-}
-
-.project-list-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: .5rem;
-  padding: 25px;
-}
-
-.project-card {
-  width: 18rem;
-  border: 3px solid #fff
-}
-
-.project-card .view-button {
-  float: right;
-}
-
-.project {
-  height: 100%;
 }
