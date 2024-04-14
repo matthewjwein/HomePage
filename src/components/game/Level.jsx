@@ -3,7 +3,6 @@ import { useFrame } from '@react-three/fiber'
 import { CuboidCollider, RigidBody } from '@react-three/rapier'
 import { useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
-import Resume from '../resume/ResumeHtml'
 
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
 

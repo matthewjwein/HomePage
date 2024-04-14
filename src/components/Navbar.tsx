@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHome, faGamepad } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHome, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
     faLinkedin,
@@ -36,8 +36,9 @@ const Navbar = () => {
                         justifyContent="space-between"
                         alignItems="center"
                     >
+
                         <a href="/">
-                            <FontAwesomeIcon color="white" icon={faHome} size="2x" ></FontAwesomeIcon>
+                            <FontAwesomeIcon color="white" icon={faHome} size="2x" />
                         </a>
                         <nav>
                             <HStack spacing={4}>
@@ -47,9 +48,12 @@ const Navbar = () => {
                             <HStack spacing={8}>
                                 {socials.map((social) => {
                                     return <a target="_blank" rel="noreferrer" key={social.url} href={social.url}>
-                                        <FontAwesomeIcon color="white" icon={social.icon} size="2x" ></FontAwesomeIcon>
+                                        <FontAwesomeIcon color="white" icon={social.icon} size="2x" />
                                     </a>
                                 })}
+                                <a href="/resume">
+                                    <FontAwesomeIcon color="white" icon={faFilePdf} size="2x" />
+                                </a>
                             </HStack>
                         </nav>
                     </HStack>
